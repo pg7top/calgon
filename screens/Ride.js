@@ -29,7 +29,7 @@ export default class RideScreen extends Component {
       hasCameraPermissions: null,
       scanned: false,
       bikeType: "",
-      userName: ""
+      userName: "",
       email:firebase.auth().currentUser.email,
     };
   }
