@@ -29,7 +29,7 @@ export default class RideScreen extends Component {
       hasCameraPermissions: null,
       scanned: false,
       bikeType: "",
-      userName: ""
+      userName: "",
       email:"",
       password:"",
       
@@ -89,42 +89,7 @@ export default class RideScreen extends Component {
     
 
   
-  render() {
-    const { email, password } = this.state;
-    return (
-      <KeyboardAvoidingView behavior="padding" style={styles.container}>
-        <ImageBackground source={bgImage} style={styles.bgImage}>
-          <View style={styles.upperContainer}>
-            <Image source={appIcon} style={styles.appIcon} />
-            <Image source={appName} style={styles.appName} />
-          </View>
-          <View style={styles.lowerContainer}>
-            <TextInput
-              style={styles.textinput}
-              onChangeText={text => this.setState({ email: text })}
-              placeholder={"Digite o endereço de E-Mail"}
-              placeholderTextColor={"#FFFFFF"}
-              autoFocus
-            />
-            <TextInput
-              style={[styles.textinput, { marginTop: 20 }]}
-              onChangeText={text => this.setState({ password: text })}
-              placeholder={"Insira uma Senha"}
-              placeholderTextColor={"#FFFFFF"}
-              secureTextEntry
-            />
-            <TouchableOpacity
-              style={[styles.button, { marginTop: 20 }]}
-              onPress={() => this.handleLogin(email, password)}
-            >
-              <Text style={styles.buttonText}>Entrar</Text>
-            </TouchableOpacity>
-          </View>
-        </ImageBackground>
-      </KeyboardAvoidingView>
-    );
-  }
-}
+ 
 
 const styles = StyleSheet.create({
   container: {
