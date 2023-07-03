@@ -169,6 +169,7 @@ export default class RideScreen extends Component {
     const userRef = await db
       .collection("users")
       .where("id", "==", userId)
+      .where("email_id",'==',userId)
       .get();
 
     var isUserEligible = false;
